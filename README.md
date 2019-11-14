@@ -11,4 +11,4 @@
 - Se Professor publico for igual a V o ingreço preço será reduzido em 50%, se não preço normal
 - Se Estudante for igual a V o ingreço preço será reduzido em 50%, se não preço normal
 - Se Idade for maior ou igual a 60, o ingreço preço será reduzido em 50%, se não preço normal
-- Se RA (tabelinha com RA dos alunos carentes) for igual a V e dia for igual a TERÇA, o ingreço preço será reduzido a 100%, se não preço normal
+iiiiiiiiiiiiiiiiiiiiiiiiii
