@@ -5,7 +5,7 @@
 int main()
 {
 
-   int quant_bilhetes, caso_filmes, horario_sessao = 0, FP;
+   int amountTicket, teather, sessionHour = 0, FP;
 
    printf("\t===============================================\n");
    printf("\t===============================================\n");
@@ -20,9 +20,9 @@ int main()
    printf("\t----------------------------------------------\n");
    printf("Zero para sair:\n\n ");
 
-   scanf("%i", &caso_filmes);
+   scanf("%i", &teather);
 
-   switch (caso_filmes)
+   switch (teather)
    {
 
    default:
@@ -33,7 +33,7 @@ int main()
 
       printf("\t--------------------------------------\n");
 
-      printf("\t Cine 1: O Auto da Compadecida\n");
+      printf("\t Teatro 1: O Auto da Compadecida\n");
 
       printf("\t Sessao [1]: 13:30 \n");
 
@@ -45,16 +45,16 @@ int main()
 
       printf("\t--------------------------------------\n");
 
-      scanf("%i", &horario_sessao);
+      scanf("%i", &sessionHour);
 
-      if (horario_sessao == 1)
+      if (sessionHour == 1)
       {
 
          printf("\tInforme a quantidade de bilhetes que deseja comprar:\n");
 
-         scanf("%i", &quant_bilhetes);
+         scanf("%i", &amountTicket);
 
-         if (quant_bilhetes <= 20)
+         if (amountTicket <= 20)
          {
 
             printf("\t---------------------------------------\n");
@@ -92,14 +92,14 @@ int main()
          }
       }
 
-      if (horario_sessao == 2)
+      if (sessionHour == 2)
       {
 
          printf("\tInforme a quantidade de bilhetes que deseja comprar:\n");
 
-         scanf("%i", &quant_bilhetes);
+         scanf("%i", &amountTicket);
 
-         if (quant_bilhetes <= 20)
+         if (amountTicket <= 20)
          {
 
             printf("\t---------------------------------------\n");
@@ -140,14 +140,14 @@ int main()
          }
       }
 
-      if (horario_sessao == 3)
+      if (sessionHour == 3)
       {
 
          printf("\tInforme a quantidade de bilhetes que deseja comprar:\n");
 
-         scanf("%i", &quant_bilhetes);
+         scanf("%i", &amountTicket);
 
-         if (quant_bilhetes <= 20)
+         if (amountTicket <= 20)
          {
 
             printf("\t---------------------------------------\n");
@@ -206,16 +206,16 @@ int main()
 
       printf("\t--------------------------------------\n");
 
-      scanf("%i", &horario_sessao);
+      scanf("%i", &sessionHour);
 
-      if (horario_sessao == 1)
+      if (sessionHour == 1)
       {
 
          printf("\tInforme a quantidade de bilhetes que deseja comprar:\n");
 
-         scanf("%i", &quant_bilhetes);
+         scanf("%i", &amountTicket);
 
-         if (quant_bilhetes <= 20)
+         if (amountTicket <= 20)
          {
 
             printf("\t---------------------------------------\n");
@@ -256,14 +256,14 @@ int main()
          }
       }
 
-      if (horario_sessao == 2)
+      if (sessionHour == 2)
       {
 
          printf("\tInforme a quantidade de bilhetes que deseja comprar:\n");
 
-         scanf("%i", &quant_bilhetes);
+         scanf("%i", &amountTicket);
 
-         if (quant_bilhetes <= 20)
+         if (amountTicket <= 20)
          {
 
             printf("\t---------------------------------------\n");
@@ -292,14 +292,14 @@ int main()
          }
       }
 
-      if (horario_sessao == 3)
+      if (sessionHour == 3)
       {
 
          printf("\tInforme a quantidade de bilhetes que deseja comprar:\n");
 
-         scanf("%i", &quant_bilhetes);
+         scanf("%i", &amountTicket);
 
-         if (quant_bilhetes <= 20)
+         if (amountTicket <= 20)
          {
 
             printf("\t---------------------------------------\n");
@@ -346,7 +346,7 @@ int main()
 
       printf("\t-----------------------------------------------\n");
 
-      printf("\t Cine 3: Vestido de Noiva \n");
+      printf("\t Teatro 3: Vestido de Noiva \n");
 
       printf("\t Sessao 1: 13:30 \n");
 
@@ -358,16 +358,16 @@ int main()
 
       printf("\t-----------------------------------------------\n");
 
-      scanf("%i", &horario_sessao);
+      scanf("%i", &sessionHour);
 
-      if (horario_sessao == 1)
+      if (sessionHour == 1)
       {
 
          printf("\tInforme a quantidade de bilhetes que deseja comprar:\n");
 
-         scanf("%i", &quant_bilhetes);
+         scanf("%i", &amountTicket);
 
-         if (quant_bilhetes <= 20)
+         if (amountTicket <= 20)
          {
 
             printf("\t---------------------------------------\n");
@@ -408,14 +408,14 @@ int main()
          }
       }
 
-      if (horario_sessao == 2)
+      if (sessionHour == 2)
       {
 
          printf("\tInforme a quantidade de bilhetes que deseja comprar:\n");
 
-         scanf("%i", &quant_bilhetes);
+         scanf("%i", &amountTicket);
 
-         if (quant_bilhetes <= 20)
+         if (amountTicket <= 20)
          {
 
             printf("\t---------------------------------------\n");
@@ -456,14 +456,14 @@ int main()
          }
       }
 
-      if (horario_sessao == 3)
+      if (sessionHour == 3)
       {
 
          printf("\tInforme a quantidade de bilhetes que deseja comprar:\n");
 
-         scanf("%i", &quant_bilhetes);
+         scanf("%i", &amountTicket);
 
-         if (quant_bilhetes <= 20)
+         if (amountTicket <= 20)
          {
 
             printf("\t---------------------------------------\n");
