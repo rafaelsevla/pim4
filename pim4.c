@@ -26,7 +26,7 @@ void choiceColumn(int row, char column, char places[6][6], char *hour, char *tea
   {
   case 'a':
   case 'A':
-    printf("Lugar ocupado. Escolha outro lugar");
+    printf("Lugar ocupado. Escolha outro lugar\n");
     break;
   case 'b':
   case 'B':
@@ -211,8 +211,16 @@ void choicePlaceTicket(char *hour, char *teather, char *day)
   case 1:
     printf("\tInforme a letra da fileira que você deseja:\n");
     scanf("%s", &letter);
-    choiceColumn(number, letter, places, hour, teather, day);
-    verifyMidEntry(hour, teather, day);
+    if (letter == 'a' || letter == 'A')
+    {
+      printf("Lugar ocupado. Escolha outro lugar\n");
+      choicePlaceTicket(hour, teather, day);
+    }
+    else
+    {
+      choiceColumn(number, letter, places, hour, teather, day);
+      verifyMidEntry(hour, teather, day);
+    }
     break;
   case 2:
     printf("\tInforme a letra da fileira que você deseja:\n");
