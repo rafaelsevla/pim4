@@ -26,7 +26,7 @@ void choiceColumn(int row, char column, char places[6][6], char *hour, char *tea
   {
   case 'a':
   case 'A':
-    printf("Lugar ocupado. Escolha outro lugar");
+    printf("Lugar ocupado. Escolha outro lugar\n");
     break;
   case 'b':
   case 'B':
@@ -137,25 +137,31 @@ void confirmTicketFreeEntry(char *hour, char *teather, char *day)
 
 void verifyMidEntry(char *hour, char *teather, char *day)
 {
+  printf("%s", day);
+
   int age, ra;
   int isFree = 0;
   char teacher, student, hasRa;
 
-  printf("Você tem R.A.? Digite V se sim.\n");
-  scanf("%s", &hasRa);
-
-  if (hasRa == 'V' || hasRa == 'v')
+  if (itsFreeDay >= 1)
   {
-    printf("Digite seu R.A.\n");
-    scanf("%i", &ra);
-    if (ra == 1929779 || ra == 1980345 || ra == 1981881 & itsFreeDay >= 1)
+
+    printf("Você tem R.A.? Digite V se sim.\n");
+    scanf("%s", &hasRa);
+
+    if (hasRa == 'V' || hasRa == 'v')
     {
-      isFree = 1;
-      confirmTicketFreeEntry(hour, teather, day);
+      printf("Digite seu R.A.\n");
+      scanf("%i", &ra);
+      if (ra == 1929779 || ra == 1980345 || ra == 1981881)
+      {
+        isFree = 1;
+        confirmTicketFreeEntry(hour, teather, day);
+      }
     }
   }
 
-  if (isFree == 0)
+  if (isFree == 0 || hasRa != 'V' || hasRa != 'v')
   {
     printf("Qual sua idade?\n");
     scanf("%i", &age);
@@ -211,8 +217,16 @@ void choicePlaceTicket(char *hour, char *teather, char *day)
   case 1:
     printf("\tInforme a letra da fileira que você deseja:\n");
     scanf("%s", &letter);
-    choiceColumn(number, letter, places, hour, teather, day);
-    verifyMidEntry(hour, teather, day);
+    if (letter == 'a' || letter == 'A')
+    {
+      printf("Lugar ocupado. Escolha outro lugar\n");
+      choicePlaceTicket(hour, teather, day);
+    }
+    else
+    {
+      choiceColumn(number, letter, places, hour, teather, day);
+      verifyMidEntry(hour, teather, day);
+    }
     break;
   case 2:
     printf("\tInforme a letra da fileira que você deseja:\n");
@@ -277,7 +291,7 @@ void choiceHour(char *teather, char *day)
 
 void choiceDay(char *teather)
 {
-  int day;
+  int choiceDay;
   printf("\t-----------------------------------------------\n");
   printf("\t Teatro: %s \n", teather);
   printf("\t Comprar bilhete para qual dia? \n\n");
@@ -290,8 +304,8 @@ void choiceDay(char *teather)
   printf("\t [7] Domingo \n");
   printf("\t-----------------------------------------------\n\t");
 
-  scanf("%i", &day);
-  switch (day)
+  scanf("%i", &choiceDay);
+  switch (choiceDay)
   {
   case 1:
     choiceHour(teather, "Segunda");
