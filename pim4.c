@@ -56,56 +56,40 @@ void choiceColumn(int row, char column, char places[6][6], char *hour, char *tea
 
 void confirmTicketMidEntry(char *hour, char *teather, char *day)
 {
-  char confirm;
+  int number;
 
-  printf("Meia entrada. Confirmar ingresso? Digite V\n");
-  scanf("%s", &confirm);
+  printf("Meia entrada. Confirmar ingresso? Pressione algum número\n");
+  scanf("%i", &number);
 
-  if (confirm == 'V' || confirm == 'v')
-  {
-    printf("\t===============================================\n");
-    printf("\t-----------------------------------------------\n");
-    printf("\t Teatro: %s \n", teather);
-    printf("\t Dia da semana: %s \n", day);
-    printf("\t Sessão: %s \n", hour);
-    printf("\t Tipo: Meia entrada.\n");
-    printf("\t-----------------------------------------------\n");
-    printf("\t===============================================\n");
+  printf("\t===============================================\n");
+  printf("\t-----------------------------------------------\n");
+  printf("\t Sessão: %s \n", hour);
+  printf("\t Teatro: %s \n", teather);
+  printf("\t Dia da semana: %s \n", day);
+  printf("\t Tipo: Meia entrada.\n");
+  printf("\t-----------------------------------------------\n");
+  printf("\t===============================================\n");
 
-    system("pause");
-  }
-  else
-  {
-    printf("\tCompra de ingresso cancelada\n");
-    system("pause");
-  }
+  system("pause");
 }
 
 void confirmTicketEntryTotal(char *hour, char *teather, char *day)
 {
-  char confirm;
+  int number;
 
-  printf("Entrada inteira. Confirmar ingresso? Digite V\n");
-  scanf("%s", &confirm);
+  printf("Meia entrada. Confirmar ingresso? Pressione algum número\n");
+  scanf("%i", &number);
 
-  if (confirm == 'V' || confirm == 'v')
-  {
-    printf("\t===============================================\n");
-    printf("\t-----------------------------------------------\n");
-    printf("\t Teatro: %s \n", teather);
-    printf("\t Dia da semana: %s \n", day);
-    printf("\t Sessão: %s \n", hour);
-    printf("\t Tipo: Entrada inteira.\n");
-    printf("\t-----------------------------------------------\n");
-    printf("\t===============================================\n");
+  printf("\t===============================================\n");
+  printf("\t-----------------------------------------------\n");
+  printf("\t Teatro: %s \n", teather);
+  printf("\t Dia da semana: %s \n", day);
+  printf("\t Sessão: %s \n", hour);
+  printf("\t Tipo: Entrada inteira.\n");
+  printf("\t-----------------------------------------------\n");
+  printf("\t===============================================\n");
 
-    system("pause");
-  }
-  else
-  {
-    printf("\tCompra de ingresso cancelada\n");
-    system("pause");
-  }
+  system("pause");
 }
 
 void confirmTicketFreeEntry(char *hour, char *teather, char *day)
@@ -120,7 +104,7 @@ void confirmTicketFreeEntry(char *hour, char *teather, char *day)
     printf("\t===============================================\n");
     printf("\t-----------------------------------------------\n");
     printf("\t Teatro: %s \n", teather);
-    printf("\t Dia da semana: %s \n", day);
+    printf("\t Dia da semana: Terça \n");
     printf("\t Sessão: %s \n", hour);
     printf("\t Tipo: Entrada grátis.\n");
     printf("\t-----------------------------------------------\n");
@@ -137,8 +121,6 @@ void confirmTicketFreeEntry(char *hour, char *teather, char *day)
 
 void verifyMidEntry(char *hour, char *teather, char *day)
 {
-  printf("%s", day);
-
   int age, ra;
   int isFree = 0;
   char teacher, student, hasRa;
